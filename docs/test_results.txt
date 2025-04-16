@@ -1,0 +1,3 @@
+GET /products: Retrieved 20 products successfully
+POST /products: Created product "Air Purifier" (ID: 21)
+POST /products: Created product "VR Headset" (ID: 22)
