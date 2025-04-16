@@ -2,12 +2,14 @@
 # Unit tests for product endpoints
 
 from fastapi.testclient import TestClient
+
 from app.main import app
 
 client = TestClient(app)
 
 
 def test_get_products():
+    """Test creating a product via POST request."""
     response = client.get("/products")
     assert response.status_code == 200
     assert isinstance(response.json(), list)
@@ -15,6 +17,7 @@ def test_get_products():
 
 
 def test_create_product():
+    """Create a new product in the database."""
     new_product = {
         "id": 23,
         "name": "Test Product",

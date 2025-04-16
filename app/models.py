@@ -1,10 +1,13 @@
-# app/models.py
-# Pydantic models for data validation and serialization
+"""Data models for the Online Store API.
+
+Defines Pydantic models for product data validation and serialization.
+"""
 
 from pydantic import BaseModel
 
 
 class Product(BaseModel):
+    """Model for a product in the online store."""
     id: int
     name: str
     price: float
@@ -12,5 +15,5 @@ class Product(BaseModel):
     category: str
 
     class Config:
-        # Enable ORM compatibility for future database integration
-        from_attributes = True
+        """Configuration for Pydantic model to enable ORM compatibility."""
+    from_attributes = True

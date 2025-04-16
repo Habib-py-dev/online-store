@@ -1,7 +1,10 @@
-# app/database.py
-# Simulated in-memory database for product catalog
+"""In-memory database for the Online Store API.
+
+Manages product data storage and retrieval operations.
+"""
 
 from typing import List
+
 from .models import Product
 
 # Initial product catalog (replace with SQLAlchemy/PostgreSQL in production)
