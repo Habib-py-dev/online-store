@@ -1,8 +1,7 @@
-"""Data models for the Online Store API.
-
-Defines Pydantic models for product data validation and serialization.
 """
-
+This module does [describe its purpose].
+"""
+from typing import ClassVar
 from pydantic import BaseModel
 
 
@@ -16,4 +15,4 @@ class Product(BaseModel):
 
     class Config:
         """Configuration for Pydantic model to enable ORM compatibility."""
-    from_attributes = True
+        from_attributes: ClassVar[bool] = True
